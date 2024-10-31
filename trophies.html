@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOPPS Daily</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <!------------------------------BODY------------------------------------------------>
+
+  <body>
+    <!--Navigation bar-->
+    <nav>
+      <!--Add a sandwich icon here-->
+      <div class="sandwich-icon-area">
+        <p onclick="openNav()">&#9776;</p>
+        <div class="weblogo">
+          <span><a href="index.html"><img src="Liverpool logo.jpg" alt="Logo" /></a></span>
+        </div>
+      </div>
+
+      <header>
+        <h1>KOPPS DAILY</h1>
+      </header>
+
+      <div class="horizontal-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li>
+            <a href="players.html">Players</a>
+          </li>
+          <li>
+            <a class="active" href="trophies.html">Trophies</a>
+            <ul class="dropdown">
+              <li><a href="epl.html">EPL</a></li>
+              <li><a href="ucl.html">UCL</a></li>
+              <li><a href="cwc.html">CWC</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="aboutUs.html">About-Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--The curtain dropdown menu-->
+
+    <div id="myNav" class="overlay">
+      <p class="close-icon" onclick="closeNav()">&times;</p>
+      <div class="overlay-content">
+        <a href="index.html">HOME</a>
+        <a href="players.html">Players</a>
+        <a href="trophies.html">Trophies</a>
+        <a href="aboutUs.html">About US</a>
+      </div>
+    </div>
+
+    <script>
+      //Here is Javascript codes
+      //When users click on "sandwich icon", open or show the curtain menu layer
+      //Write the openNav() method here
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
+
+      //Write the closeNav() method here
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
+
+    
+        </header>
+        <body>
+          <main class="mainArea">
+            <div class="AboutUsContainer">
+              <div class="AboutUsStory">
+                <h1>EPL</h1>
+                <img src="Trophy_images/Kit.jpg" alt="EPL Champions">
+                <div class="NewsOverlay">
+                  <p>Liverpool FC won their first Premier League title in the 2019-2020 season. Under the management of Jürgen Klopp, Liverpool secured the championship with an impressive 32 wins, 3 draws, and 3 losses. This victory ended a 30-year wait for the league title and was a significant achievement for the club and its fans.</p>
+                  <div class="btn"></div>
+                    <a href="epl.html"><button>Read More</button></a>
+                </div>
+              </div>
+              <div class="AboutUsContainer">
+                <div class="AboutUsStory">
+                  <h1>UCL</h1>
+                  <img src="Trophy_images/UCL.jpg" alt="UCL Champions">
+                  <div class="NewsOverlay">
+                    <p>Liverpool FC most recently won the UEFA Champions League (UCL) in 2019. They defeated Tottenham Hotspur 2-0 in the final held on June 1, 2019, at the Estadio Metropolitano in Madrid. Mohamed Salah scored a penalty in the second minute, and Divock Origi added a late goal to secure the victory.</p>
+                    <div class="btn"></div>
+                    <a href="ucl.html"><button>Read More</button></a>
+                  </div>
+                </div>
+                <div class="AboutUsContainer">
+                  <div class="AboutUsStory">
+                    <h1>CWC</h1>
+                    <img src="Trophy_images/CWC.jpg" alt="CWC Champions">
+                    <div class="NewsOverlay">
+                      <p>Liverpool FC most recently won the FIFA Club World Cup in 2019. They defeated Flamengo 1-0 in the final, held on December 21, 2019, at the Khalifa International Stadium in Qatar. Roberto Firmino scored the decisive goal in extra time, securing Liverpool's first Club World Cup title.</p>
+                      <div class="btn"></div>
+                        <a href="cwc.html"><button>Read More</button></a>
+                    </div>
+                  </div>
+        </main>
+        </body>
+    </main>
+
+    <!--Footer Area-->
+    <footer>
+      <div class="footerContainers">
+       <div class="social-icons">
+         <a href="https://www.facebook.com/LiverpoolFC/"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://www.instagram.com/liverpoolfc/"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://x.com/LFC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter"></i></a>
+       </div>
+      </div>
+      <div class="footerBottom">
+       <p>This is for academic purpose Created by <span class="designer">@Terrence</span></p>
+     </div>
+ 
+     <script>
+       document.addEventListener("DOMContentLoaded", function () {
+           const designerElement = document.querySelector(".designer");
+           const email = "terrencecharamba24@gmail.com";
+ 
+           const newContent = designerElement.innerHTML.replace("@Terrence", `<a href="mailto:${email}">@Terrence</a>`);
+           designerElement.innerHTML = newContent;
+       });
+   </script>
+     </footer>
+  </body>
+</html>

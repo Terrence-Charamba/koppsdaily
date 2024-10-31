@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOPPS Daily</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <!------------------------------BODY------------------------------------------------>
+
+  <body>
+    <!--Navigation bar-->
+    <nav>
+      <!--Add a sandwich icon here-->
+      <div class="sandwich-icon-area">
+        <p onclick="openNav()">&#9776;</p>
+        <div class="weblogo">
+          <span><a href="index.html"><img src="Liverpool logo.jpg" alt="Logo" /></a></span>
+        </div>
+      </div>
+
+      <header>
+        <h1>KOPPS DAILY</h1>
+      </header>
+
+      <div class="horizontal-nav">
+        <ul>
+          <li><a class="active" href="index.html">HOME</a></li>
+          <li>
+            <a href="players.html">Players</a>
+          </li>
+          <li>
+            <a href="trophies.html">Trophies</a>
+            <ul class="dropdown">
+              <li><a href="epl.html">EPL</a></li>
+              <li><a href="ucl.html">UCL</a></li>
+              <li><a href="cwc.html">CWC</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="aboutUs.html">About-Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--The curtain dropdown menu-->
+
+    <div id="myNav" class="overlay">
+      <p class="close-icon" onclick="closeNav()">&times;</p>
+      <div class="overlay-content">
+        <a href="index.html">HOME</a>
+        <a href="players.html">Players</a>
+        <a href="trophies.html">Trophies</a>
+        <a href="aboutUs.html">About US</a>
+      </div>
+    </div>
+
+    <script>
+      //Here is Javascript codes
+      //When users click on "sandwich icon", open or show the curtain menu layer
+      //Write the openNav() method here
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
+
+      //Write the closeNav() method here
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
+
+    <!--Header area-->
+
+    <!--main area-->
+    <main id="mainArea">
+        <header>
+
+            <section></section>
+                <h4 id="slide-title">The Champions</h4>
+                <img id="slide-image" src="Homeslide/Captain.jpg" height="200" />
+            </section>
+
+            <script>
+                //Declare an array of images to create a slideshow
+                let topMoments = [
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/Kit.jpg",
+                },
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/Captain.jpg",
+                },
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/keeper.jpg",
+                },
+
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/MOCWC.jpg",
+                },
+                ];
+
+                //Create a slideshow for topMoments
+                //Create a funciton in Javascript
+                let slideshowIndex = 0;
+                function autoSlideshow() {
+                //Check if slideshowIndex < the length of the array, if true -> increase the index by 1, else set slideshowIndex=0
+                if (slideshowIndex < topMoments.length - 1) {
+                    slideshowIndex++; //increment by 1
+                } else {
+                    slideshowIndex = 0;
+                }
+                //Just update the title and image url accordingly
+                document.getElementById("slide-title").innerHTML =
+                    topMoments[slideshowIndex].title;
+                document.getElementById("slide-image").src =
+                    topMoments[slideshowIndex].img_url;
+                //Wait for a while: 2 seconds
+                setTimeout(autoSlideshow, 2000);
+                }
+                //Call to run or execute this autoSlideshow() function
+                autoSlideshow();
+            </script>
+        </header>
+        <main class="mainArea">
+          
+          <div class="AboutUsContainer">
+            <div class="AboutUsStory">
+              <h1>Westham Gets Destroyed</h1>
+              <img src="Home images/LivHam.jpg" alt="LiverpoolManager">
+              <div class="NewsOverlay">
+                <p>Liverpool sit second in the Premier League, with the best defensive record and goal differential in the competition, and kicked off their Champions League campaign with a dominant win at one of Europe’s historic giants, so while stakes of the Carabao Cup might not get fans up like the other two potential trophies do, expectations will nonetheless be high, as they host West Ham at Anfield.
+
+                  The Hammers haven’t been doing great so far this year, with a measly four points ensuring they sit 14th in the table after five games, but they did make it to the third round of the Carabao Cup after scraping a 1-0 win over Bournemouth courtesy of a late Jarrod Bowen strike.
+                  
+                  Having ended their five-year David Moyes project, under which the Scot oversaw West Ham’s drop from top six contenders to perennial mid-table dwellers, the London club have gone continental, appointing former Spain and Real Madrid manager Julen Lopetegui to the chair in the summer.
+                  
+                  The Spaniard is potentially looking at a fully fit squad tomorrow, as Niclas Füllkrug appears to have recovered from a calf injury just in time to contribute in the competition that likely serves as the club’s most plausible avenue for success this season.</p>
+              </div>
+            </div>
+            <div class="AboutUsContainer">
+              <div class="AboutUsStory">
+                <h1>Kelleher Gets His Game Time</h1>
+                <img src="Home images/Kelleher.jpg" alt="Aanfield">
+                <div class="NewsOverlay">
+                  <p>Kelleher deputised for the injured Alisson and kept a clean sheet last time out as the Reds defeated AFC Bournemouth 3-0 at Anfield.
+
+                    The Republic of Ireland international is set to retain the spot for the Carabao Cup third-round tie with West Ham United, as Alisson aims to be back in contention for the subsequent Premier League trip to Wolverhampton Wanderers on Saturday.
+                    
+                    “It’s sure that Caoimh will be in goal tomorrow,” head coach Slot said at his pre-West Ham press conference.
+                    
+                    “Alisson is getting there but I think this game is coming just a bit too early and we are looking at the weekend against Wolves, but it’s going to be tight so let’s see if he manages to be there.
+                    
+                    “But he will not be there tomorrow so Caoimh will be in goal tomorrow, that’s the one thing I know for sure at this moment.
+                    
+                    “I wasn’t surprised at all with his performance [against Bournemouth] because he was very good in pre-season already and he was very good with his national team as well.
+                    
+                    “It’s a good thing for us that we have two quality players, and we forget the third one in this position because in almost every position we have two but in goalkeepers we have got three or four and our third one is also a really good goalkeeper. So it’s a good thing for us.
+                    
+                    “Like you saw, we need to have a strong squad because you can pick up injuries or whatever can happen. So, it was good to see and pleasing to see that he kept a clean sheet – not in a way that he had nothing to do, he had to act a few times and he acted really well.”
+                    
+                    </p>
+                </div>
+              </div>
+              <div class="AboutUsContainer">
+                <div class="AboutUsStory">
+                  <h1>Diaz Keeps flying</h1>
+                  <img src="Home images/Diaz.jpg" alt="LiverpoolOwner">
+                  <div class="NewsOverlay">
+                    <p>Diaz netted a quickfire double at Anfield on Saturday to help inspire the Reds to a 3-0 victory over AFC Bournemouth.
+
+                      The Colombian opened the scoring in the 26th minute and then grabbed his other goal 120 seconds later.
+                      
+                      Diaz, who also found the back of the net against Brentford and Manchester United (twice), took his 2024-25 tally in the league to five.
+                      Only Mohamed Salah (2020-21) and Michael Owen (2000-01) have scored more in the first five fixtures of a campaign.
+                      
+                      Owen also racked up five in five in 2003-04, as did Robbie Fowler in 1994-95.
+                      "If you're wondering when did Luis Diaz get to five goals last season in the Premier League? February. So it just shows the improvement he's made this season.
+                      
+                      "Absolutely outstanding, it really is."</p>
+                  </div>
+                </div>
+      
+
+    </main>
+        
+  
+  <!--Footer Area-->
+    <footer>
+        <div class="footerContainers">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/LiverpoolFC/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/liverpoolfc/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/LFC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        </div>
+        <div class="footerBottom">
+        <p>This is for academic purpose Created by <span class="designer">@Terrence</span></p>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+              const designerElement = document.querySelector(".designer");
+              const email = "terrencecharamba24@gmail.com";
+    
+              const newContent = designerElement.innerHTML.replace("@Terrence", `<a href="mailto:${email}">@Terrence</a>`);
+              designerElement.innerHTML = newContent;
+          });
+          </script>
+      </div>
+    </footer>
+  </body>
+</html>

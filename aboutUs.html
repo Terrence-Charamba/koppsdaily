@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOPPS Daily</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <!------------------------------BODY------------------------------------------------>
+
+  <body>
+    <!--Navigation bar-->
+    <nav>
+      <!--Add a sandwich icon here-->
+      <div class="sandwich-icon-area">
+        <p onclick="openNav()">&#9776;</p>
+        <div class="weblogo">
+          <span><a href="index.html"><img src="Liverpool logo.jpg" alt="Logo" /></a></span>
+        </div>
+      </div>
+
+      <header>
+        <h1>KOPPS DAILY</h1>
+      </header>
+
+      <div class="horizontal-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li>
+            <a href="players.html">Players</a>
+          </li>
+          <li>
+            <a href="trophies.html">Trophies</a>
+            <ul class="dropdown">
+              <li><a href="epl.html">EPL</a></li>
+              <li><a href="ucl.html">UCL</a></li>
+              <li><a href="cwc.html">CWC</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="active" href="aboutUs.html">About-Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--The curtain dropdown menu-->
+
+    <div id="myNav" class="overlay">
+      <p class="close-icon" onclick="closeNav()">&times;</p>
+      <div class="overlay-content">
+        <a href="index.html">HOME</a>
+        <a href="players.html">Players</a>
+        <a href="trophies.html">Trophies</a>
+        <a href="aboutUs.html">About US</a>
+      </div>
+    </div>
+
+    <script>
+      //Here is Javascript codes
+      //When users click on "sandwich icon", open or show the curtain menu layer
+      //Write the openNav() method here
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
+
+      //Write the closeNav() method here
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
+
+    <!--Header area-->
+
+    <!--main area-->
+    <main class="mainArea">
+        <div class="AboutUsContainer">
+          <div class="AboutUsStory">
+            <h1>The New Head Coach</h1>
+            <img src="AboutUs_images/Manager.jpg" alt="LiverpoolManager">
+            <div class="NewsOverlay">
+              <p>Liverpool's current head coach is Arne Slot. He took over the role in June 2024, succeeding Jürgen Klopp. Slot, a 45-year-old Dutch coach, was previously the head coach of Feyenoord, where he led the team to the league title in 2023 and was named Eredivisie Manager of the Year twice. He also won the KNVB Cup with Feyenoord in April 20241.
+
+                Slot's appointment marks a new era for Liverpool as he brings his extensive experience and successful track record to the club. Do you think he'll be able to maintain Liverpool's high standards?</p>
+            </div>
+          </div>
+          <div class="AboutUsContainer">
+            <div class="AboutUsStory">
+              <h1>The Field Of Dreams</h1>
+              <img src="AboutUs_images/Aanfield.jpg" alt="Aanfield">
+              <div class="NewsOverlay">
+                <p>Liverpool FC is a professional football club based in Liverpool, England. Founded on June 3, 1892, the club competes in the Premier League, the top tier of English football1. Liverpool plays its home games at Anfield, which has a capacity of 61,276.
+
+                  The club is one of the most successful and widely supported in the world. Domestically, Liverpool has won 19 league titles, 8 FA Cups, 10 League Cups, and 16 FA Community Shields. Internationally, they have secured 6 European Cups, 3 UEFA Cups, 4 UEFA Super Cups, and 1 FIFA Club World Cup.
+                  
+                  Liverpool is known for its distinctive all-red home strip and the club anthem "You'll Never Walk Alone," both adopted under the management of Bill Shankly in the 1960s. The club has a fierce rivalry with Everton, known as the Merseyside derby, and also competes with Manchester United in the North West Derby</p>
+              </div>
+            </div>
+            <div class="AboutUsContainer">
+              <div class="AboutUsStory">
+                <h1>FSG Hires P Marques</h1>
+                <img src="AboutUs_images/Owner.jpg" alt="LiverpoolOwner">
+                <div class="NewsOverlay">
+                  <p>Fenway Sports Group (FSG), Liverpool's owners, are close to confirming the appointment of Pedro Marques as part of their new setup. Marques, currently the technical director at Benfica, is set to join FSG in a key role overseeing their football operations1. This move is seen as a significant coup for FSG, given Marques' strong reputation and extensive experience in football performance analysis and player development.
+
+                    Marques previously worked with the City Football Group, where he helped develop coaching methodologies and performance analysis for multiple clubs. His appointment is part of FSG's strategy to transition into a multi-club ownership model and maintain a consistent style of play and culture across their clubs</p>
+                </div>
+              </div>
+      
+    </main>
+    <div class="mailingList"> 
+      <h1>Subscribe to our Mailing List</h1> 
+      <form id="mailingList"> 
+        <input type="email" id="email" 
+        placeholder="Enter your email" required> 
+        <button type="submit">Subscribe</button> 
+      </form> 
+        </div> 
+    <script src="main.js"></script>
+
+    <div class="embedClip"><iframe width="100%" 
+      height="315" 
+      src="https://www.youtube.com/embed/YhqiSO_UFxg?si=3sKqEm0vyOaPgyVy" 
+      title="YouTube video player" 
+      frameborder="20" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen></iframe>
+    </div>
+    
+
+    <!--Footer Area-->
+
+    <footer>
+      <div class="footerContainers">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/LiverpoolFC/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/liverpoolfc/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/LFC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <p>This is for academic purpose Created by <span class="designer">@Terrence</span></p>
+      </div>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const designerElement = document.querySelector(".designer");
+            const email = "terrencecharamba24@gmail.com";
+
+            const newContent = designerElement.innerHTML.replace("@Terrence", `<a href="mailto:${email}">@Terrence</a>`);
+            designerElement.innerHTML = newContent;
+        });
+      </script>
+    </footer>
+  </body>
+</html>
+

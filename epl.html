@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOPPS Daily</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <!------------------------------BODY------------------------------------------------>
+
+  <body>
+    <!--Navigation bar-->
+    <nav>
+      <!--Add a sandwich icon here-->
+      <div class="sandwich-icon-area">
+        <p onclick="openNav()">&#9776;</p>
+        <div class="weblogo">
+          <span><a href="index.html"><img src="Liverpool logo.jpg" alt="Logo" /></a></span>
+        </div>
+      </div>
+
+      <header>
+        <h1>KOPPS DAILY</h1>
+      </header>
+
+      <div class="horizontal-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li>
+            <a href="players.html">Players</a>
+          </li>
+          <li>
+            <a href="trophies.html">Trophies</a>
+            <ul class="dropdown">
+              <li><a class="active" href="epl.html">EPL</a></li>
+              <li><a href="ucl.html">UCL</a></li>
+              <li><a href="cwc.html">CWC</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="aboutUs.html">About-Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--The curtain dropdown menu-->
+
+    <div id="myNav" class="overlay">
+      <p class="close-icon" onclick="closeNav()">&times;</p>
+      <div class="overlay-content">
+        <a href="index.html">HOME</a>
+        <a href="players.html">Players</a>
+        <a href="trophies.html">Trophies</a>
+        <a href="aboutUs.html">About US</a>
+      </div>
+    </div>
+
+    <script>
+      //Here is Javascript codes
+      //When users click on "sandwich icon", open or show the curtain menu layer
+      //Write the openNav() method here
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
+
+      //Write the closeNav() method here
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
+
+    <!--Header area-->
+
+    <!--main area-->
+    <h2>ENGLISH PREMIER LEAGUE</h2>
+    <main id="mainArea">
+        <header>
+
+            <section></section>
+                <h4 id="slide-title">The Champions</h4>
+                <img id="slide-image" src="Homeslide/Captain.jpg" height="200" />
+            </section>
+
+            <script>
+                //Declare an array of images to create a slideshow
+                let topMoments = [
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/Keeper.jpg",
+                },
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/Captain.jpg",
+                },
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/Kit.jpg",
+                },
+
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/MOCWC.jpg",
+                },
+                ];
+
+                //Create a slideshow for topMoments
+                //Create a funciton in Javascript
+                let slideshowIndex = 0;
+                function autoSlideshow() {
+                //Check if slideshowIndex < the length of the array, if true -> increase the index by 1, else set slideshowIndex=0
+                if (slideshowIndex < topMoments.length - 1) {
+                    slideshowIndex++; //increment by 1
+                } else {
+                    slideshowIndex = 0;
+                }
+                //Just update the title and image url accordingly
+                document.getElementById("slide-title").innerHTML =
+                    topMoments[slideshowIndex].title;
+                document.getElementById("slide-image").src =
+                    topMoments[slideshowIndex].img_url;
+                //Wait for a while: 2 seconds
+                setTimeout(autoSlideshow, 2000);
+                }
+                //Call to run or execute this autoSlideshow() function
+                autoSlideshow();
+            </script>
+        </header>
+    </main>
+    <div class="liverpoolHistory">
+      <h3>Early Years in the Premier League (1992-2000)</h3>
+      <p>Liverpool was one of the founding members of the Premier League in 1992. The club had already established itself as a dominant force in English football, having won numerous league titles and European trophies in the past. In the inaugural Premier League season, Liverpool finished in 6th place. The early years of the Premier League saw Liverpool continue to be competitive, although they did not win the title during this period.</p>
+      <h3>The Houllier Era (2001-2004)</h3>
+      <p>In 2001, Gerard Houllier took over as manager and led Liverpool to their first major trophy in the Premier League era by winning the 2001 FA Cup. The following season, Liverpool finished 2nd in the league, narrowly missing out on the title to Arsenal. Houllier's tenure saw Liverpool become a consistent top-four team, qualifying for the Champions League multiple times.</p>
+      <h3>The Benitez Era and the Miracle of Istanbul (2004-2010)</h3>
+      <p>Rafael Benitez succeeded Houllier in 2004 and quickly made his mark by leading Liverpool to the 2005 Champions League title with the famous "Miracle of Istanbul." Domestically, Benitez guided Liverpool to a 5th place finish in the 2005-2006 season, securing another Champions League spot. The following season, Liverpool finished 3rd, but the highlight was their 2007 Champions League final appearance, where they lost to AC Milan.</p>
+      <h3>Transition and Near Misses (2010-2015)</h3>
+      <p>Following Benitez's departure, Liverpool experienced a period of transition with several managerial changes. Despite this, the club remained competitive in the Premier League, often finishing in the top four. Notable achievements during this period include a 2nd place finish in the 2013-2014 season under Brendan Rodgers, narrowly missing out on the title to Manchester City.</p>
+      <h3>The Klopp Era and Return to Glory (2015-Present)</h3>
+      <p>Jürgen Klopp was appointed as Liverpool manager in 2015 and quickly transformed the team into title contenders. Klopp's high-intensity pressing style and tactical acumen brought success to Anfield. Liverpool finished 4th in his first full season, securing a Champions League spot. The 2017-2018 season saw Liverpool reach the Champions League final again, only to lose to Real Madrid.
+        In 2019, Liverpool won their first Premier League title in 30 years, finishing with 97 points. The following season, they narrowly missed out on retaining the title, finishing 2nd behind Manchester City. However, Liverpool continued to be a dominant force in the EPL, consistently finishing in the top four and competing in the Champions League.</p>
+      <h3>Notable Achievements</h3>
+        <p>
+          <li>Premier League Titles: Liverpool has won 19 league titles, with their most recent coming in 2020.</li>
+          <li>Top Goalscorers: Mohamed Salah is Liverpool's top goalscorer in the Premier League era, with over 100 goals.</li>
+          <li>Most Appearances: James Milner holds the record for the most Premier League appearances for Liverpool.</li>
+        </p>
+      <p>Liverpool's journey in the Premier League has been marked by highs and lows, but the club's rich history and passionate fan base continue to make it one of the most successful and beloved teams in English football.</p>
+     </div>
+
+    <!--Footer Area-->
+
+    <footer>
+      <div class="footerContainers">
+       <div class="social-icons">
+         <a href="https://www.facebook.com/LiverpoolFC/"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://www.instagram.com/liverpoolfc/"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://x.com/LFC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter"></i></a>
+       </div>
+      </div>
+      <div class="footerBottom">
+       <p>This is for academic purpose Created by <span class="designer">@Terrence</span></p>
+     </div>
+ 
+     <script>
+       document.addEventListener("DOMContentLoaded", function () {
+           const designerElement = document.querySelector(".designer");
+           const email = "terrencecharamba24@gmail.com";
+ 
+           const newContent = designerElement.innerHTML.replace("@Terrence", `<a href="mailto:${email}">@Terrence</a>`);
+           designerElement.innerHTML = newContent;
+       });
+   </script>
+     </footer>
+  </body>
+</html>

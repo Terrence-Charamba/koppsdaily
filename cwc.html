@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOPPS Daily</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <!------------------------------BODY------------------------------------------------>
+
+  <body>
+    <!--Navigation bar-->
+    <nav>
+      <!--Add a sandwich icon here-->
+      <div class="sandwich-icon-area">
+        <p onclick="openNav()">&#9776;</p>
+        <div class="weblogo">
+          <span><a href="index.html"><img src="Liverpool logo.jpg" alt="Logo" /></a></span>
+        </div>
+      </div>
+
+      <header>
+        <h1>KOPPS DAILY</h1>
+      </header>
+
+      <div class="horizontal-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li>
+            <a href="players.html">Players</a>
+          </li>
+          <li>
+            <a href="trophies.html">Trophies</a>
+            <ul class="dropdown">
+              <li><a href="epl.html">EPL</a></li>
+              <li><a href="ucl.html">UCL</a></li>
+              <li><a class="active" href="cwc.html">CWC</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="aboutUs.html">About-Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--The curtain dropdown menu-->
+
+    <div id="myNav" class="overlay">
+      <p class="close-icon" onclick="closeNav()">&times;</p>
+      <div class="overlay-content">
+        <a href="index.html">HOME</a>
+        <a href="players.html">Players</a>
+        <a href="trophies.html">Trophies</a>
+        <a href="aboutUs.html">About US</a>
+      </div>
+    </div>
+
+    <script>
+      //Here is Javascript codes
+      //When users click on "sandwich icon", open or show the curtain menu layer
+      //Write the openNav() method here
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
+
+      //Write the closeNav() method here
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
+
+    <!--Header area-->
+
+    <!--main area-->
+    <h2>CLUB WORLD CUP</h2>
+    <main id="mainArea">
+      <header>
+
+          <section></section>
+              <h4 id="slide-title">The Champions</h4>
+              <img id="slide-image" src="Homeslide/Captain.jpg" height="200" />
+          </section>
+
+          <script>
+              //Declare an array of images to create a slideshow
+              let topMoments = [
+              {
+                  id: 0,
+                  title: "",
+                  img_url: "Homeslide/Keeper.jpg",
+              },
+              {
+                  id: 0,
+                  title: "",
+                  img_url: "Homeslide/Captain.jpg",
+              },
+              {
+                  id: 0,
+                  title: "",
+                  img_url: "Homeslide/Kit.jpg",
+              },
+
+              {
+                  id: 0,
+                  title: "",
+                  img_url: "Homeslide/MOCWC.jpg",
+              },
+              ];
+
+              //Create a slideshow for topMoments
+              //Create a funciton in Javascript
+              let slideshowIndex = 0;
+              function autoSlideshow() {
+              //Check if slideshowIndex < the length of the array, if true -> increase the index by 1, else set slideshowIndex=0
+              if (slideshowIndex < topMoments.length - 1) {
+                  slideshowIndex++; //increment by 1
+              } else {
+                  slideshowIndex = 0;
+              }
+              //Just update the title and image url accordingly
+              document.getElementById("slide-title").innerHTML =
+                  topMoments[slideshowIndex].title;
+              document.getElementById("slide-image").src =
+                  topMoments[slideshowIndex].img_url;
+              //Wait for a while: 2 seconds
+              setTimeout(autoSlideshow, 2000);
+              }
+              //Call to run or execute this autoSlideshow() function
+              autoSlideshow();
+          </script>
+      </header>
+  </main>
+  <div class="liverpoolHistory">
+    <h3>Early Attempts (1981-1984)</h3>
+    <p>Liverpool's first foray into the Club World Cup, then known as the Intercontinental Cup, came in 1981 after their European Cup victory. They faced Brazilian side Flamengo in Tokyo but were defeated 3-0. The club returned to the competition in 1984 following another European Cup win, this time facing Argentinian club Independiente in Tokyo, but again ended up on the losing side with a 1-0 defeat.</p>
+    <h3>The Benitez Era(2005)</h3>
+    <p>Liverpool's next appearance in the Club World Cup came in 2005, following their famous "Miracle of Istanbul" victory in the Champions League. Under manager Rafael Benitez, Liverpool reached the semi-finals by defeating Costa Rican side Deportivo Saprissa 3-0. However, they were unable to secure the title, losing 1-0 to Brazilian club São Paulo in the final held in Yokohama, Japan.</p>
+    <h3>The Klopp Era and World Champions (2019)</h3>
+    <p>Liverpool's most recent and successful attempt at the Club World Cup came in 2019 under manager Jürgen Klopp. After securing their sixth European Cup in 2019, Liverpool traveled to Qatar to compete in the Club World Cup. They defeated Mexican club Monterrey 2-1 in the semi-finals and went on to face Copa Libertadores holders Flamengo in the final. Liverpool clinched the title with a 1-0 victory, thanks to an extra-time goal by Roberto Firmino, becoming world champions for the first time.</p>
+    <h3>Notable Achievements</h3>
+    <p>
+      <li>FIFA Club World Cup Titles: Liverpool has won the Club World Cup once, in 2019.</li>
+      <li>Top Goalscorers: Roberto Firmino's extra-time goal in the 2019 final is the most notable goal in Liverpool's Club World Cup history.</li>
+      <li>Most Appearances: Liverpool has made four attempts at the Club World Cup or its precursor, the Intercontinental Cup, with their most recent success in 2019.</li>
+    </p>
+    <p>Liverpool's journey in the Club World Cup, though limited, has been marked by both challenges and triumphs. The club's ability to secure the title in 2019 added another prestigious trophy to their cabinet and solidified their status as one of the world's elite football clubs.</p>
+   </div>
+
+
+    <!--Footer Area-->
+
+    <footer>
+      <div class="footerContainers">
+       <div class="social-icons">
+         <a href="https://www.facebook.com/LiverpoolFC/"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://www.instagram.com/liverpoolfc/"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://x.com/LFC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter"></i></a>
+       </div>
+      </div>
+      <div class="footerBottom">
+       <p>This is for academic purpose Created by <span class="designer">@Terrence</span></p>
+     </div>
+ 
+     <script>
+       document.addEventListener("DOMContentLoaded", function () {
+           const designerElement = document.querySelector(".designer");
+           const email = "terrencecharamba24@gmail.com";
+ 
+           const newContent = designerElement.innerHTML.replace("@Terrence", `<a href="mailto:${email}">@Terrence</a>`);
+           designerElement.innerHTML = newContent;
+       });
+   </script> 
+     </footer>
+  </body>
+</html>

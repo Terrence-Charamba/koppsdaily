@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOPPS Daily</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <!------------------------------BODY------------------------------------------------>
+
+  <body>
+    <!--Navigation bar-->
+    <nav>
+      <!--Add a sandwich icon here-->
+      <div class="sandwich-icon-area">
+        <p onclick="openNav()">&#9776;</p>
+        <div class="weblogo">
+          <span><a href="index.html"><img src="Liverpool logo.jpg" alt="Logo" /></a></span>
+        </div>
+      </div>
+
+      <header>
+        <h1>KOPPS DAILY</h1>
+      </header>
+
+      <div class="horizontal-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li>
+            <a class="active" href="players.html">Players</a>
+          </li>
+          <li>
+            <a href="trophies.html">Trophies</a>
+            <ul class="dropdown">
+              <li><a href="epl.html">EPL</a></li>
+              <li><a href="ucl.html">UCL</a></li>
+              <li><a href="CWC.html">CWC</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="aboutUs.html">About-Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--The curtain dropdown menu-->
+
+    <div id="myNav" class="overlay">
+      <p class="close-icon" onclick="closeNav()">&times;</p>
+      <div class="overlay-content">
+        <a href="index.html">HOME</a>
+        <a href="players.html">Players</a>
+        <a href="trophies.html">Trophies</a>
+        <a href="aboutUs.html">About US</a>
+      </div>
+    </div>
+
+    <script>
+      //Here is Javascript codes
+      //When users click on "sandwich icon", open or show the curtain menu layer
+      //Write the openNav() method here
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
+
+      //Write the closeNav() method here
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
+
+    <!--Header area-->
+
+    <main id="mainArea">
+        <header>
+
+            <section></section>
+                <h4 id="slide-title">The Champions</h4>
+                <img id="slide-image" src="Homeslide/Captain.jpg" height="200" />
+            </section>
+
+            <script>
+                //Declare an array of images to create a slideshow
+                let topMoments = [
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/Kit.jpg",
+                },
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/Captain.jpg",
+                },
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/keeper.jpg",
+                },
+
+                {
+                    id: 0,
+                    title: "",
+                    img_url: "Homeslide/MOCWC.jpg",
+                },
+                ];
+
+                //Create a slideshow for topMoments
+                //Create a funciton in Javascript
+                let slideshowIndex = 0;
+                function autoSlideshow() {
+                //Check if slideshowIndex < the length of the array, if true -> increase the index by 1, else set slideshowIndex=0
+                if (slideshowIndex < topMoments.length - 1) {
+                    slideshowIndex++; //increment by 1
+                } else {
+                    slideshowIndex = 0;
+                }
+                //Just update the title and image url accordingly
+                document.getElementById("slide-title").innerHTML =
+                    topMoments[slideshowIndex].title;
+                document.getElementById("slide-image").src =
+                    topMoments[slideshowIndex].img_url;
+                //Wait for a while: 2 seconds
+                setTimeout(autoSlideshow, 2000);
+                }
+                //Call to run or execute this autoSlideshow() function
+                autoSlideshow();
+            </script>
+        </header>
+        <body>
+          <main class="mainArea">
+            <header>
+           
+            </header>
+            <div class="AboutUsContainer">
+              <div class="AboutUsStory">
+                <h1>Allison</h1>
+                <img src="Players_images/Allison.jpg" alt="Allison">
+                <div class="NewsOverlay">
+                  <p>Alisson Becker is Liverpool FC’s star goalkeeper. Born on October 2, 1992 in Brazil, he joined Liverpool in 2018 and quickly became a key player. Known for his excellent shot-stopping and composure, Alisson has been crucial in helping Liverpool win the Premier League and the Champions League. His performances also earned him accolades with the Brazil national team, including a 2019 Copa América win. A calm and commanding presence between the posts, Alisson is one of the best goalkeepers in the world.</p>
+                </div>
+              </div>
+              <div class="AboutUsContainer">
+                <div class="AboutUsStory">
+                  <h1>Curtis Jones</h1>
+                  <img src="Players_images/Curtis Jones.jpg" alt="Curtis Jones">
+                  <div class="NewsOverlay">
+                    <p>Curtis Jones is an English professional footballer who plays as a midfielder for Liverpool FC. Born on January 30, 2001, in Liverpool, he joined the club's academy at the age of nine and made his first-team debut in 2019. Known for his versatility, technical skills, and press resistance, Jones has become an essential part of Liverpool's midfield2. He has won several titles with the club, including the Premier League and the FA Cup.</p>
+                  </div>
+                </div>
+                <div class="AboutUsContainer">
+                  <div class="AboutUsStory">
+                    <h1>Diaz</h1>
+                    <img src="Players_images/Diaz.jpg" alt="Diaz">
+                    <div class="NewsOverlay">
+                      <p>Luis Díaz is a Colombian professional footballer who plays as a left winger for Liverpool FC. Born on January 13, 1997, in Barrancas, Colombia, he joined Liverpool in January 2022 from FC Porto. Known for his speed, skill, and goal-scoring ability, Díaz has quickly become a key player for the Reds. He wears the No. 7 shirt and has already won several titles with Liverpool, including the FA Cup and the Carabao Cup.</p>
+                    </div>
+                  </div>
+            
+        </main>
+        <main class="mainArea">
+          <header>
+         
+          </header>
+          <div class="AboutUsContainer">
+            <div class="AboutUsStory">
+              <h1>Konate</h1>
+              <img src="Players_images/Konate.jpg" alt="Konate">
+              <div class="NewsOverlay">
+                <p>Ibrahima Konaté is a French professional footballer who plays as a centre-back for Liverpool FC. Born on May 25, 1999, in Paris, France, Konaté joined Liverpool in 2021 from RB Leipzig. Known for his height, strength, and defensive skills, Konaté has become a key player for Liverpool, helping the team win the FA Cup and the Carabao Cup. He has also represented the France national team and was part of their squad that reached the 2022 World Cup final.</p>
+              </div>
+            </div>
+            <div class="AboutUsContainer">
+              <div class="AboutUsStory">
+                <h1>Mac Allister</h1>
+                <img src="Players_images/Mac Allister.jpg" alt="Mac Allister">
+                <div class="NewsOverlay">
+                  <p>Alexis Mac Allister is an Argentine professional footballer who plays as a midfielder for Liverpool FC. Born on December 24, 1998, in Santa Rosa, Argentina, he joined Liverpool in 2023 from Brighton & Hove Albion. Known for his versatility, passing, and goal-scoring ability, Mac Allister has quickly become a key player for the Reds1. He was also part of Argentina's squad that won the 2022 FIFA World Cup.</p>
+                </div>
+              </div>
+              <div class="AboutUsContainer">
+                <div class="AboutUsStory">
+                  <h1>Nunez</h1>
+                  <img src="Players_images/Nunez.jpg" alt="Nunez">
+                  <div class="NewsOverlay">
+                    <p>Darwin Núñez is a Uruguayan professional footballer who plays as a striker for Liverpool FC. Born on June 24, 1999, in Artigas, Uruguay, Núñez joined Liverpool in 2022 from Benfica for a fee of €75 million. Known for his speed, agility, and goal-scoring ability, Núñez has quickly become a key player for the Reds. He has also represented the Uruguay national team and was part of their squad for the 2022 FIFA World Cup.</p>
+                  </div>
+                </div>
+          
+      </main>
+      <main class="mainArea">
+        <header>
+       
+        </header>
+        <div class="AboutUsContainer">
+          <div class="AboutUsStory">
+            <h1>Robertson</h1>
+            <img src="Players_images/Robertson.jpg" alt="Robertson">
+            <div class="NewsOverlay">
+              <p>Andrew Robertson, commonly known as Andy Robertson, is a Scottish professional footballer who plays as a left-back for Liverpool FC and the Scotland national team. Born on March 11, 1994, in Glasgow, Scotland, Robertson joined Liverpool in 2017 for an initial fee of £8 million. Known for his speed, work rate, and crossing ability, Robertson has become a vital part of Liverpool's defense and attack. He has won several titles with Liverpool, including the Premier League and the Champions League in 2019. Robertson is also the captain of the Scotland national team1.</p>
+            </div>
+          </div>
+          <div class="AboutUsContainer">
+            <div class="AboutUsStory">
+              <h1>Sallah</h1>
+              <img src="Players_images/Sallah.jpg" alt="Sallah">
+              <div class="NewsOverlay">
+                <p>Mohamed Salah is an Egyptian professional footballer who plays as a forward for Liverpool FC and the Egypt national team. Born on June 15, 1992, in Basyoun, Egypt, Salah joined Liverpool in 2017 for a fee of £36.9 million. Known for his speed, dribbling, and goal-scoring ability, Salah has been a key player for Liverpool, helping the team win the Premier League, Champions League, and FA Cup. He is also the club's all-time top Premier League goalscorer.</p>
+              </div>
+            </div>
+            <div class="AboutUsContainer">
+              <div class="AboutUsStory">
+                <h1>Szoboszlai</h1>
+                <img src="Players_images/Szoboszlai.jpg" alt="Szoboszlai">
+                <div class="NewsOverlay">
+                  <p>Dominik Szoboszlai is a Hungarian professional footballer who plays as a midfielder for Liverpool FC. Born on October 25, 2000, in Székesfehérvár, Hungary, Szoboszlai joined Liverpool in July 2023 from RB Leipzig. Known for his versatility, attacking mindset, and goal-scoring ability, Szoboszlai has quickly become a key player for the Reds. He wears the No. 8 shirt and has already won the Carabao Cup with Liverpool.</p>
+                </div>
+              </div>
+        
+    </main>
+    <main class="mainArea">
+      <header>
+     
+      </header>
+      <div class="AboutUsContainer">
+        <div class="AboutUsStory">
+          <h1>Trent</h1>
+          <img src="Players_images/Trent.jpg" alt="Trent">
+          <div class="NewsOverlay">
+            <p>Trent Alexander-Arnold is an English professional footballer who plays as a right-back for Liverpool FC and the England national team. Born on October 7, 1998, in Liverpool, England, he joined Liverpool's academy in 2004 and made his senior debut in 2016. Known for his exceptional crossing, passing, and set-piece taking abilities, Trent has become one of the best right-backs in the world. He has won several titles with Liverpool, including the Premier League and the Champions League in 2019.</p>
+          </div>
+        </div>
+        <div class="AboutUsContainer">
+          <div class="AboutUsStory">
+            <h1>Van Dijk</h1>
+            <img src="Players_images/Van Dijk.jpg" alt="Van Dijk">
+            <div class="NewsOverlay">
+              <p>Virgil van Dijk is a Dutch professional footballer who plays as a centre-back for Liverpool FC and the Netherlands national team. Born on July 8, 1991, in Breda, Netherlands, Van Dijk joined Liverpool in January 2018 for a then-world-record transfer fee for a defender. Known for his strength, leadership, and defensive skills, Van Dijk has been a key player for Liverpool, helping the team win the Premier League, Champions League, and FA Cup. He is also the captain of both Liverpool and the Netherlands national team1.</p>
+            </div>
+        </div>
+        <div class="AboutUsContainer">
+          <div class="AboutUsStory">
+            <h1>Tsimikas</h1>
+            <img src="Players_images/Tsimikas.jpg" alt="Tsimikas">
+            <div class="NewsOverlay">
+              <p>Kostas Tsimikas is a Greek professional footballer who plays as a left-back for Liverpool FC and the Greece national team. Born on May 12, 1996, in Thessaloniki, Greece, Tsimikas joined Liverpool in August 2020 from Olympiacos. Known for his defensive skills, work rate, and crossing ability, Tsimikas has become a reliable option for Liverpool's backline. He has won several titles with the club, including the FA Cup and the Carabao Cup.</p>
+            </div>
+        </div>
+  </main>
+        </body>
+    </main>
+
+    <!--Footer Area-->
+
+    <footer>
+      <div class="footerContainers">
+       <div class="social-icons">
+         <a href="https://www.facebook.com/LiverpoolFC/"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://www.instagram.com/liverpoolfc/"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://x.com/LFC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter"></i></a>
+       </div>
+      </div>
+      <div class="footerBottom">
+       <p>This is for academic purpose Created by <span class="designer">@Terrence</span></p>
+     </div>
+ 
+     <script>
+       document.addEventListener("DOMContentLoaded", function () {
+           const designerElement = document.querySelector(".designer");
+           const email = "terrencecharamba24@gmail.com";
+ 
+           const newContent = designerElement.innerHTML.replace("@Terrence", `<a href="mailto:${email}">@Terrence</a>`);
+           designerElement.innerHTML = newContent;
+       });
+   </script>
+     </footer>
+  </body>
+</html>

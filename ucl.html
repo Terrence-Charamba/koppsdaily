@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOPPS Daily</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="Javascript" type="text/css" href="main.js" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <!------------------------------BODY------------------------------------------------>
+
+  <body>
+    <!--Navigation bar-->
+    <nav>
+      <!--Add a sandwich icon here-->
+      <div class="sandwich-icon-area">
+        <p onclick="openNav()">&#9776;</p>
+        <div class="weblogo">
+          <span><a href="index.html"><img src="Liverpool logo.jpg" alt="Logo" /></a></span>
+        </div>
+      </div>
+
+      <header>
+        <h1>KOPPS DAILY</h1>
+      </header>
+
+      <div class="horizontal-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="players.html">Players</a>
+          </li>
+          <li>
+            <a href="trophies.html">Trophies</a>
+            <ul class="dropdown">
+              <li><a href="epl.html">EPL</a></li>
+              <li><a class="active" href="ucl.html">UCL</a></li>
+              <li><a href="cwc.html">CWC</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="aboutUs.html">About-Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--The curtain dropdown menu-->
+
+    <div id="myNav" class="overlay">
+      <p class="close-icon" onclick="closeNav()">&times;</p>
+      <div class="overlay-content">
+        <a href="Home.html">HOME</a>
+        <a href="Players.html">Players</a>
+        <a href="Trophies.html">Trophies</a>
+        <a href="AboutUs.html">About US</a>
+      </div>
+    </div>
+
+    <script>
+      //Here is Javascript codes
+      //When users click on "sandwich icon", open or show the curtain menu layer
+      //Write the openNav() method here
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
+
+      //Write the closeNav() method here
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
+
+    <!--Header area-->
+
+    <!--main area-->
+    <h2>UEFA CHAMPIONS LEAGUE</h2>
+    <main id="mainArea">
+      <header>
+
+          <section></section>
+              <h4 id="slide-title">The Champions</h4>
+              <img id="slide-image" src="Homeslide/Captain.jpg" height="200" />
+          </section>
+
+          <script>
+              //Declare an array of images to create a slideshow
+              let topMoments = [
+              {
+                  id: 0,
+                  title: "",
+                  img_url: "Homeslide/Keeper.jpg",
+              },
+              {
+                  id: 0,
+                  title: "",
+                  img_url: "Homeslide/Captain.jpg",
+              },
+              {
+                  id: 0,
+                  title: "",
+                  img_url: "Homeslide/Kit.jpg",
+              },
+
+              {
+                  id: 0,
+                  title: "",
+                  img_url: "Homeslide/MOCWC.jpg",
+              },
+              ];
+
+              //Create a slideshow for topMoments
+              //Create a funciton in Javascript
+              let slideshowIndex = 0;
+              function autoSlideshow() {
+              //Check if slideshowIndex < the length of the array, if true -> increase the index by 1, else set slideshowIndex=0
+              if (slideshowIndex < topMoments.length - 1) {
+                  slideshowIndex++; //increment by 1
+              } else {
+                  slideshowIndex = 0;
+              }
+              //Just update the title and image url accordingly
+              document.getElementById("slide-title").innerHTML =
+                  topMoments[slideshowIndex].title;
+              document.getElementById("slide-image").src =
+                  topMoments[slideshowIndex].img_url;
+              //Wait for a while: 2 seconds
+              setTimeout(autoSlideshow, 2000);
+              }
+              //Call to run or execute this autoSlideshow() function
+              autoSlideshow();
+          </script>
+      </header>
+  </main>
+ 
+  <div class="liverpoolHistory">
+    <h3>Early Successes (1970s-1980s)</h3>
+    <p>Liverpool's journey in European competitions began in the 1960s, but their first European Cup win came in 1977 under manager Bob Paisley. They successfully defended their title the following year in 1978. The club continued its dominance in the early 1980s, winning the European Cup again in 1981 and 1984. These victories established Liverpool as a powerhouse in European football.</p>
+    <h3>The Miracle of Istanbul (2005)</h3>
+    <p>One of the most iconic moments in Liverpool's history came in 2005 with the famous "Miracle of Istanbul." Liverpool faced AC Milan in the final and found themselves trailing 3-0 at halftime. However, a remarkable second-half comeback led by Steven Gerrard and others saw Liverpool level the match at 3-3, eventually winning 3-2 on penalties. This victory marked Liverpool's fifth European Cup win and is celebrated as one of the greatest comebacks in football history.</p>
+    <h3>Modern Era (2010s-Present)</h3>
+    <p>Liverpool returned to the pinnacle of European football in 2019 under manager Jürgen Klopp. They defeated Tottenham Hotspur 2-0 in the final to secure their sixth Champions League title. This win was particularly significant as it ended a 14-year drought in the competition for Liverpool and marked Klopp's first major trophy with the club.</p>
+    <h3>Notable Achievements</h3>
+    <p>
+      <li>Most Champions League Titles: Liverpool is tied with Bayern Munich for the third-most Champions League titles, behind Real Madrid and AC Milan.</li>
+          <li>Top Goalscorers: Mohamed Salah is Liverpool's top scorer in the Champions League with 48 goals.</li>
+          <li>Most Appearances: Jamie Carragher holds the record for the most appearances in European competitions for Liverpool, with 150.</li>
+    </p>
+    <p>Liverpool's success in the Champions League has solidified its status as one of Europe's elite clubs. The club's passionate fan base and rich history continue to make it a formidable force in European football.</p>
+   </div>
+
+
+    <!--Footer Area-->
+
+    <footer>
+      <div class="footerContainers">
+       <div class="social-icons">
+         <a href="https://www.facebook.com/LiverpoolFC/"><i class="fa-brands fa-facebook"></i></a>
+         <a href="https://www.instagram.com/liverpoolfc/"><i class="fa-brands fa-instagram"></i></a>
+         <a href="https://x.com/LFC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter"></i></a>
+       </div>
+      </div>
+      <div class="footerBottom">
+       <p>This is for academic purpose Created by <span class="designer">@Terrence</span></p>
+     </div>
+ 
+     <script>
+       document.addEventListener("DOMContentLoaded", function () {
+           const designerElement = document.querySelector(".designer");
+           const email = "terrencecharamba24@gmail.com";
+ 
+           const newContent = designerElement.innerHTML.replace("@Terrence", `<a href="mailto:${email}">@Terrence</a>`);
+           designerElement.innerHTML = newContent;
+       });
+   </script>
+
+   
+    </footer>
+  </body>
+</html>

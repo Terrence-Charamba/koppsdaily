@@ -32,4 +32,6 @@ project to design and build a static prototype website for Liverpool FC, followi
 - Semantic HTML and modular CSS
 - Embed Link
 - Slide Show
-- Demo News letter/ Mailling
+- Responsive demo News letter/ Mailling
+
+[Welcome to Kopps Daily](https://terrence-charamba.github.io/koppsdaily/)
